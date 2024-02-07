@@ -1,0 +1,4 @@
+repository "swift-project@vsmo_unity@cloud"
+  path "/"
+    br "/main"
+    co "/main"
