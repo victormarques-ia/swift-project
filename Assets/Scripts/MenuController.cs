@@ -6,10 +6,22 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     public void start() {
-       UnityEngine.SceneManagement.SceneManager.LoadScene("ErasScene");
+       SceneManager.LoadSceneAsync("ErasScene");
     }
 
     public void backFromErasScene() {
-       UnityEngine.SceneManagement.SceneManager.LoadScene("MenuScene");
+       SceneManager.LoadSceneAsync("MenuScene");
+    }
+
+    public void rules() {
+       SceneManager.LoadSceneAsync("RulesScene");
+    }
+
+    public void backFromRulesScene() {
+       SceneManager.LoadSceneAsync("MenuScene");
+    }
+
+    public void exit() {
+       print("Exit");
     }
 }

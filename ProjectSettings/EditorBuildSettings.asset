@@ -10,6 +10,9 @@ EditorBuildSettings:
     guid: d537cb2ecf7650c4c9e98640ebd18fd7
   - enabled: 1
     path: Assets/Scenes/ErasScene.unity
+    guid: d84c03464bb7dac44990e242a2de3eb8
+  - enabled: 1
+    path: Assets/Scenes/RulesScene.unity
     guid: 625b71978f6284143943cbecadce2529
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
