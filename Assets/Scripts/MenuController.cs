@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
 
 public class MenuController : MonoBehaviour
 {
-    public void start() {
-       SceneManager.LoadSceneAsync("ErasScene");
+    public async void start() {
+         SceneManager.LoadSceneAsync("HistoryScene");
+         await Task.Delay(3000);
+         SceneManager.LoadSceneAsync("ErasScene");         
     }
 
     public void backFromErasScene() {
@@ -23,5 +26,6 @@ public class MenuController : MonoBehaviour
 
     public void exit() {
        print("Exit");
+       Application.Quit();
     }
 }
