@@ -726,7 +726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4132188978185152788, guid: bd00d9a803e95f24c9929e485d7c71d4, type: 3}
       propertyPath: m_text
-      value: 1 - Texto 1
+      value: salt air
       objectReference: {fileID: 0}
     - target: {fileID: 6100357799857233727, guid: bd00d9a803e95f24c9929e485d7c71d4, type: 3}
       propertyPath: m_Pivot.x
@@ -938,7 +938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4132188978185152788, guid: bd00d9a803e95f24c9929e485d7c71d4, type: 3}
       propertyPath: m_text
-      value: 3 - Texto 3
+      value: mirrorball
       objectReference: {fileID: 0}
     - target: {fileID: 6100357799857233727, guid: bd00d9a803e95f24c9929e485d7c71d4, type: 3}
       propertyPath: m_Pivot.x
@@ -1071,7 +1071,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4132188978185152788, guid: bd00d9a803e95f24c9929e485d7c71d4, type: 3}
       propertyPath: m_text
-      value: 2 - Texto 2
+      value: cardigan
       objectReference: {fileID: 0}
     - target: {fileID: 6100357799857233727, guid: bd00d9a803e95f24c9929e485d7c71d4, type: 3}
       propertyPath: m_Pivot.x
