@@ -9,11 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScene.unity
     guid: d537cb2ecf7650c4c9e98640ebd18fd7
   - enabled: 1
-    path: Assets/Scenes/ErasScene.unity
-    guid: d84c03464bb7dac44990e242a2de3eb8
+    path: Assets/Scenes/HistoryScene.unity
+    guid: b9c6bc3face11884ba79cb53231c0aa7
   - enabled: 1
-    path: Assets/Scenes/RulesScene.unity
-    guid: 625b71978f6284143943cbecadce2529
+    path: Assets/Scenes/ErasScene.unity
+    guid: 05ce755ed6202ea4a917f2d9f848b721
+  - enabled: 1
+    path: Assets/Scenes/PhraseScene.unity
+    guid: c3e607c4ecf4a6c4d8127215ca8b16c6
+  - enabled: 1
+    path: Assets/Scenes/BraceletScene.unity
+    guid: 61afd3709ea6e9a48b157114ec1f906b
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 01e1f9195c6ee9446b6b928db18104a1
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 55daccc09a3b69647bbab145b54a3ab3
