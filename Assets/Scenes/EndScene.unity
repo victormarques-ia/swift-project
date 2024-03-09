@@ -258,8 +258,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ba0a5ab7ad79214eaa7f85e5c7640bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEra: 0
-  selectedPhrase: 
 --- !u!1 &534367896
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +692,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 268874066}
     m_Modifications:
+    - target: {fileID: 1691660530499561085, guid: bd00d9a803e95f24c9929e485d7c71d4, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1691660530499561085, guid: bd00d9a803e95f24c9929e485d7c71d4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c22e1b662cc7b0a44bb74d5aa45246a7, type: 3}
     - target: {fileID: 2849250746742231829, guid: bd00d9a803e95f24c9929e485d7c71d4, type: 3}
       propertyPath: m_Name
       value: AgainButton
@@ -897,6 +903,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 268874066}
     m_Modifications:
+    - target: {fileID: 1691660530499561085, guid: bd00d9a803e95f24c9929e485d7c71d4, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1691660530499561085, guid: bd00d9a803e95f24c9929e485d7c71d4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c22e1b662cc7b0a44bb74d5aa45246a7, type: 3}
     - target: {fileID: 2849250746742231829, guid: bd00d9a803e95f24c9929e485d7c71d4, type: 3}
       propertyPath: m_Name
       value: ExitButton
