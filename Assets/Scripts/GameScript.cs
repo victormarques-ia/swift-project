@@ -6,15 +6,23 @@ using UnityEngine.SceneManagement;
 
 public class GameScript : MonoBehaviour
 {
-
     public void onClickSelectEra(string era) {
         GameManager.Instance.selectedEra = (TaylorSwiftEra)Enum.Parse(typeof(TaylorSwiftEra), era);
         SceneManager.LoadSceneAsync("PhraseScene");
     }
 
-    public void onClickSelectPhrase(string phrase) {
-        GameManager.Instance.selectedPhrase = (PhrasesTaylorSwiftEra)Enum.Parse(typeof(PhrasesTaylorSwiftEra), phrase);
-        SceneManager.LoadSceneAsync("BraceletScene");
+    public void onClickSelectPhrase(int phraseIndex) {
+        List<string> phrases = GameManager.Instance.GetPhrasesForSelectedEra();
+        
+        if (phraseIndex >= 0 && phraseIndex < phrases.Count)
+        {
+            GameManager.Instance.selectedPhrase = phrases[phraseIndex];
+            SceneManager.LoadSceneAsync("BraceletScene");
+        }
+        else
+        {
+            Debug.LogError($"Phrase index {phraseIndex} is out of range for the selected era.");
+        }
     }
 
     public void onClikUseBracelet() {
