@@ -25,9 +25,9 @@ public class BraceletDisplayManager : MonoBehaviour
             GameObject braceletInstance = Instantiate(braceletPrefab, braceletObjectTransform.position, Quaternion.identity);
             braceletInstance.transform.SetParent(braceletObjectTransform, false);
 
-            braceletInstance.transform.localPosition = new Vector3(350, -50, -700);
-            braceletInstance.transform.localRotation = Quaternion.Euler(-38.549f, 95.402f, -101.025f);
-            braceletInstance.transform.localScale = new Vector3(50, 50, 50);
+             braceletInstance.transform.localPosition = new Vector3(-20, 150, -20);
+            braceletInstance.transform.localRotation = Quaternion.Euler(0, -90, 90);
+            braceletInstance.transform.localScale = new Vector3(400, 400, 400);
         }
         else
         {
