@@ -1085,7 +1085,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 268874067}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: backFromRulesScene
+        m_MethodName: BackFromRulesScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

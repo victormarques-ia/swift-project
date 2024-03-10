@@ -1,31 +1,34 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Threading.Tasks;
 
 public class MenuController : MonoBehaviour
 {
-    public async void start() {
-         SceneManager.LoadSceneAsync("HistoryScene");
-         await Task.Delay(3000);
-         SceneManager.LoadSceneAsync("ErasScene");         
+    public void StartGame() {
+        DontDestroyOnLoad(gameObject);
+        StartCoroutine(LoadScenesWithDelay());
     }
 
-    public void backFromErasScene() {
-       SceneManager.LoadSceneAsync("MenuScene");
+    IEnumerator LoadScenesWithDelay() {
+        SceneManager.LoadScene("HistoryScene");
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("ErasScene");
     }
 
-    public void rules() {
-       SceneManager.LoadSceneAsync("RulesScene");
+    public void BackFromErasScene() {
+       SceneManager.LoadScene("MenuScene");
     }
 
-    public void backFromRulesScene() {
-       SceneManager.LoadSceneAsync("MenuScene");
+    public void Rules() {
+       SceneManager.LoadScene("RulesScene");
     }
 
-    public void exit() {
-       print("Exit");
+    public void BackFromRulesScene() {
+       SceneManager.LoadScene("MenuScene");
+    }
+
+    public void Exit() {
+       Debug.Log("Exit");
        Application.Quit();
     }
 }
