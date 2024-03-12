@@ -11,7 +11,7 @@ public class MenuController : MonoBehaviour
 
     IEnumerator LoadScenesWithDelay() {
         SceneManager.LoadScene("HistoryScene");
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(10);
         SceneManager.LoadScene("ErasScene");
     }
 
