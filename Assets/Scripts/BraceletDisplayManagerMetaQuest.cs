@@ -23,16 +23,21 @@ public class BraceletDisplayManagerMetaQuest : MonoBehaviour
     }
     private void InstantiateSelectedBracelet()
     {
-        // var selectedEra = GameManager.Instance.selectedEra.ToString();
-        // var selectedPhrase = GameManager.Instance.selectedPhrase;
-        string prefabName = "Evermore_GoldRush";
+        var selectedEra = GameManager.Instance.selectedEra.ToString();
+        var selectedPhrase = GameManager.Instance.selectedPhrase.ToString().Replace(" ", "");
+        // string prefabName = "Evermore_GoldRush";
+        string prefabName = selectedEra + "_" + selectedPhrase;
         GameObject braceletPrefab = null;
         if(loaded == 0) {
             braceletPrefab = Resources.Load<GameObject>($"{PrefabsPath}/{prefabName}");
             loaded = 1;
         }
-
-        if (braceletPrefab != null && skeleton != null)
+        if (skeleton == null)
+        {
+            Debug.LogError("Skeleton not found.");
+            return;
+        }
+        if (braceletPrefab != null)
         {
 
             Debug.Log(skeleton.Bones.Count);

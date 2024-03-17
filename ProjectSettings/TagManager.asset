@@ -7,6 +7,23 @@ TagManager:
   - start
   - rules
   - exit
+  - Anchor
+  - back-rules
+  - eras0
+  - eras1
+  - eras2
+  - eras3
+  - eras4
+  - eras5
+  - eras6
+  - eras7
+  - eras8
+  - eras9
+  - buttonPhrase0
+  - buttonPhrase1
+  - buttonPhrase2
+  - goToEnd
+  - restart
   layers:
   - Default
   - TransparentFX

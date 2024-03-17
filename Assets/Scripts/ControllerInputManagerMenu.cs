@@ -6,33 +6,33 @@ using System.Collections.Generic; // Para usar List<>
 
 public class ControllerInputManagerMenu : MonoBehaviour
 {
-    public List<string> menuOptions = new List<string>(); // Lista de opções do menu
-    // a lsita é iniciar, regras e sair
+    public List<string> menuOptions = new List<string>();
 
-    private int selectedIndex = 0; // Índice da opção selecionada
+
+    private int selectedIndex = 0;
 
     void Start()
     {
         menuOptions.Add("start");
         menuOptions.Add("rules");
         menuOptions.Add("exit");
-        HighlightOption(selectedIndex); // Destaca a primeira opção ao iniciar
+        HighlightOption(selectedIndex); 
     }
 
     void Update()
     {
         if (OVRInput.GetDown(OVRInput.Button.Down))
         {
-            MoveSelection(1); // Move para baixo
+            MoveSelection(1);
         }
         else if (OVRInput.GetDown(OVRInput.Button.Up))
         {
-            MoveSelection(-1); // Move para cima
+            MoveSelection(-1);
         }
 
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
-            SelectOption(); // Seleciona a opção
+            SelectOption(); 
         }
     }
 
@@ -41,11 +41,11 @@ public class ControllerInputManagerMenu : MonoBehaviour
         selectedIndex += direction;
         if (selectedIndex >= menuOptions.Count)
         {
-            selectedIndex = 0; // Volta para o início se passar da última opção
+            selectedIndex = 0; 
         }
         else if (selectedIndex < 0)
         {
-            selectedIndex = menuOptions.Count - 1; // Vai para a última opção se subir acima da primeira
+            selectedIndex = menuOptions.Count - 1;
         }
 
         HighlightOption(selectedIndex);
@@ -58,24 +58,23 @@ public class ControllerInputManagerMenu : MonoBehaviour
 
     private void SelectOption()
     {
-        // Aqui você pode adicionar a lógica para cada opção do menu
-        // Exemplo:
+
         switch (selectedIndex)
         {
             case 0: // Iniciar
                 Debug.Log("Iniciar jogo");
-                // Adicione aqui a lógica para iniciar o jogo
+
                 GameManager.Instance.selectedButton = "start";
                 break;
             case 1: // Regras
                 Debug.Log("Mostrar regras");
                 GameManager.Instance.selectedButton = "rules";
-                // Adicione aqui a lógica para mostrar as regras
+
                 break;
             case 2: // Sair
                 Debug.Log("Sair do jogo");
                 GameManager.Instance.selectedButton = "exit";
-                // Adicione aqui a lógica para sair do jogo
+
                 Application.Quit();
                 break;
         }
