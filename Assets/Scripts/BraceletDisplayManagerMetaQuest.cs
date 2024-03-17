@@ -8,10 +8,10 @@ public class BraceletDisplayManagerMetaQuest : MonoBehaviour
     private const string PrefabsPath = "Bracelets";
 
     public OVRSkeleton skeleton; 
-
+    public int loaded;
     private void Start()
     {
-
+        loaded = 0;
         // InstantiateSelectedBracelet();
 
     }
@@ -26,8 +26,11 @@ public class BraceletDisplayManagerMetaQuest : MonoBehaviour
         // var selectedEra = GameManager.Instance.selectedEra.ToString();
         // var selectedPhrase = GameManager.Instance.selectedPhrase;
         string prefabName = "Evermore_GoldRush";
-
-        GameObject braceletPrefab = Resources.Load<GameObject>($"{PrefabsPath}/{prefabName}");
+        GameObject braceletPrefab = null;
+        if(loaded == 0) {
+            braceletPrefab = Resources.Load<GameObject>($"{PrefabsPath}/{prefabName}");
+            loaded = 1;
+        }
 
         if (braceletPrefab != null && skeleton != null)
         {
