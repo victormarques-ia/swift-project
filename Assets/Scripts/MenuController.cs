@@ -6,6 +6,7 @@ public class MenuController : MonoBehaviour
 {
     public void StartGame() {
         DontDestroyOnLoad(gameObject);
+        
         StartCoroutine(LoadScenesWithDelay());
     }
 
