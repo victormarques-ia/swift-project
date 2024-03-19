@@ -11,6 +11,7 @@ public class GameInitializer : MonoBehaviour
         if (GameManager.Instance == null)
         {
             var instance = Instantiate(gameManagerPrefab);
+            
             DontDestroyOnLoad(instance);
         }
     }

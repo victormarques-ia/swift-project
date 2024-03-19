@@ -22,7 +22,8 @@ public class GameManager : MonoBehaviour
 
     public TaylorSwiftEra selectedEra;
     public string selectedPhrase;
-
+    public string selectedButton;
+    public string preButton;
     public Dictionary<TaylorSwiftEra, List<string>> eraPhrases = new Dictionary<TaylorSwiftEra, List<string>>()
     {
         { TaylorSwiftEra.TaylorSwift, new List<string>{ "TS", "our song", "tim mcgraw" } },
@@ -36,7 +37,10 @@ public class GameManager : MonoBehaviour
         { TaylorSwiftEra.Evermore, new List<string>{ "gold rush", "Marjorie", "willow" } },
         { TaylorSwiftEra.Midnights, new List<string>{ "karma", "anti hero", "mastermind" } }
     };
-
+    public string getSelectedButton()
+    {
+        return selectedButton;
+    }
     public List<string> GetPhrasesForSelectedEra()
     {
         if (eraPhrases.TryGetValue(selectedEra, out List<string> phrases))
@@ -55,6 +59,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            // this.selectedButton = "start";
             DontDestroyOnLoad(gameObject);
         }
         else
